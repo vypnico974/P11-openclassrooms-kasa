@@ -1,0 +1,68 @@
+.banner {
+    border-radius: 25px;
+    height: 223px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    background-color: brown;
+  }
+  
+  .banner__cover {
+    background-color: black;
+    border-radius: 25px;
+    height: 100%;
+    left: 0;
+    opacity: 30%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+ .banner__background {
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 335px;
+  }
+  
+  .banner__text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    left: 20px;
+    position: absolute;
+    top: 50px;
+    width: 217px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .banner,
+    .banner__background {
+      width: 100%;
+    }
+  
+    .banner__text {
+      font-size: 2rem;
+      left: 125px;
+      top: 40px;
+      width: 500px;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .banner {
+      margin-bottom: 30px;
+    }
+  
+    .banner,
+    .banner__background {
+      height: 223px;
+    }
+  
+    .banner__text {
+      font-size: 3rem;
+      left: 260px;
+      top: 85px;
+      width: 800px;
+    }
+  }

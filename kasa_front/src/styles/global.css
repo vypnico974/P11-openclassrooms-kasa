@@ -1,3 +1,21 @@
+*{
+  /* règles d'espacements pour l' accessibilité*/ 
+  /* line-height: 1.5 ;
+  letter-spacing: 0.12em ;
+  word-spacing: 0.16em ; */
+  
+  box-sizing: border-box;
+ }
+/* couleurs  */
+ :root {
+	--primary-color: #ff6060;
+  --secondary-color: #000000;
+  --tertiary-color: #FFFFFF;
+  }
+ p{
+  margin-bottom: 2em;
+ } 
+
 body {
   margin: auto;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
@@ -18,6 +36,23 @@ h1,h2,p,ul {
 ul {
   padding-inline-start: 0px;
   list-style-type: none;
+}
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/**   pour centrer l'ensemble de la page pour les écrans>1464px */
+@media screen and (min-width:1464px){
+  html {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    }
 }
 
 
