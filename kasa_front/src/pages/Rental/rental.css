@@ -1,0 +1,27 @@
+.container_rental{
+    width: 100%;
+}
+
+@media screen and (min-width: 996px) {
+	.container_rental{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (min-width:668px) and (width < 996px){
+	.container_rental{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (width < 668px) {
+	.container_rental{
+        padding-left: 20px;
+        padding-right: 20px;
+    }	
+}

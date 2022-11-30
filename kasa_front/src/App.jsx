@@ -1,5 +1,5 @@
 /* react */
-import * as React from "react";
+import {React,Fragment } from "react"; //useEffect, useState
 /* composants  */
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -14,14 +14,44 @@ import './styles/global.css'
  affichage(render)
 */
 export default function App() {
+
+//   const [data, setData] = useState(null)
+// const [loading, setLoading] = useState(true)
+// const [error, setError] = useState(null)  
+
+// useEffect(() => {
+//   fetch('../../datas/data.json')
+//   .then((response) => {
+//     if(!response.ok) {
+//       throw new Error(response.status)
+//     }
+//     return response.json()
+//   })
+//   .then((json) => {
+//     setData(json)
+//     setError(null)
+//   })
+//   .catch((err) => {
+//     setError(err.message)
+//     setData(null)
+//   })
+//   .finally(setLoading(false))
+// }, [])
+
+// const [apartmentsList, setApartmentsList] = useState([])
+
+
   return (
-    <div>
+    <Fragment>
       {/* en-tête identique pour chaque page */}
-      <Header />         
+      <Header /> 
+      {/* {loading && <p>Veuillez patienter...</p>}
+      {error && <p>${error}</p>} */}
+
       <Router />
       {/* pied de page identique pour chaque page */}
       <Footer />
-    </div>
+    </Fragment>
   )
 }
 

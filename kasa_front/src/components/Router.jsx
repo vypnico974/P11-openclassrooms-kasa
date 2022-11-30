@@ -3,6 +3,7 @@ import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Error from '../pages/Error/error'
 import Home from '../pages/Home/Home'
+import Rental from '../pages/Rental/Rental'
 
 export default function Router() {
     return (
@@ -10,6 +11,7 @@ export default function Router() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/rental/:currentId" element={<Rental />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

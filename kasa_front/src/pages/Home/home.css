@@ -1,5 +1,45 @@
 .container_home{
-    padding-left: 100px;
-    padding-right: 100px;
     width: 100%;
+}
+
+.container_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #F6F6F6;
+    margin-top: 43px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    padding: 56px 20px;
+}
+@media screen and (min-width: 768px) {
+    .container_cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+.article__card{
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 996px) {
+	.container_home{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media screen and (min-width:668px) and (width < 996px){
+	.container_home{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (width < 668px) {
+	.container_home{
+        padding-left: 20px;
+        padding-right: 20px;
+    }	
 }

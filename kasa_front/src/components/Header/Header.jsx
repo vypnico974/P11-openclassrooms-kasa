@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* logo */
 import logo from "../../assets/kasa_logo.svg";
 /* css */
-import './Header.css'
+import './header.css'
 
 export default function Header() {
   return (

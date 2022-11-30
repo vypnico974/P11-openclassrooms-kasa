@@ -5,6 +5,7 @@
   word-spacing: 0.16em ; */
   
   box-sizing: border-box;
+  max-width: 1464px;
  }
 /* couleurs  */
  :root {

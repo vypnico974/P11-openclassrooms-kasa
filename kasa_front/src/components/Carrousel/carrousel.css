@@ -1,0 +1,49 @@
+.container__carrousel{
+    display:flex;
+    position:relative;
+}
+
+.arrow-left{
+    position:absolute;
+    top:40%;
+    left:1rem;
+    cursor: pointer;
+}
+
+.arrow-right{
+    position:absolute;
+    top:40%;
+    right:2rem;
+    cursor: pointer;
+}
+
+.container_picture{
+    height:415px;
+    border-radius: 25px;
+    object-fit:cover;
+    width: 100%;
+}
+
+@media screen and (width < 887px) {
+	.container_picture{
+        height:255px;        
+    }
+    .arrow-left,
+    .arrow-right {
+        width:21.7px;
+        height : 29.8px;
+
+    }
+}
+
+@media screen and (width < 487px) {
+
+    .arrow-left,
+    .arrow-right {
+        width:11.7px;
+        height : 19.8px;
+
+    }
+
+
+}
