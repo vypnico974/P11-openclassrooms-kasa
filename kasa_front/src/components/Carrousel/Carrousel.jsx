@@ -25,14 +25,18 @@ export default function Carrousel({rentalFilterId}) {
 
     return length > 1 ? (
         // flèches suivant et précèdent si plusieurs images
-        <div className="container__carrousel">          
+        <div className="container__carrousel">  
+                  
             <img className="arrow-left" src={arrowLeft} alt="Précèdent" onClick={previousPicture} />
             <img className="arrow-right" src={arrowRight} alt="Suivant" onClick={nextPicture} />
             {rentalFilterId.pictures.map((picture, index)=>
             index===current &&
             (<img className="container_picture" src={picture} alt="photos de la location" key={index} />)
             )}
+            <span className="container_text" >{current+1}/{length}</span> 
+                       
         </div>
+        
     ) :(
         // pas de flèche de une seule image
         <div className="container__carrousel">  

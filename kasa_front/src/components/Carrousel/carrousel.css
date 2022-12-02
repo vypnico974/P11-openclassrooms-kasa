@@ -17,6 +17,16 @@
     cursor: pointer;
 }
 
+.container_text{
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    color : var(--tertiary-color);
+    font-size: 1.13rem;
+    font-weight: 500;
+    line-height: 25.67px;
+}
+
 .container_picture{
     height:415px;
     border-radius: 25px;
@@ -43,6 +53,9 @@
         width:11.7px;
         height : 19.8px;
 
+    }
+    .container_text{
+        display: none;
     }
 
 

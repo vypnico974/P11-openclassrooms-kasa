@@ -1,0 +1,31 @@
+@media screen and (min-width: 768px) {
+    .container_cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+
+.article__card{
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 996px) {
+	.container_about{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media screen and (min-width:668px) and (width < 996px){
+	.container_about{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (width < 668px) {
+	.container_about{
+        padding-left: 20px;
+        padding-right: 20px;
+    }	
+}

@@ -1,0 +1,24 @@
+.container__rate{
+    margin-top: 5px;
+}
+
+.rate__star {
+    height: 15px;
+    width: 15px;
+}
+
+.rate__stars {
+  display: flex;
+}
+
+
+
+@media screen and (min-width : 800px) {
+    .rate__star {
+        height: 30px;
+        width: 30px;
+    }
+    .container__rate{
+        margin-top: 24px;
+    }
+}

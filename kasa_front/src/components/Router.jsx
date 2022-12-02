@@ -1,9 +1,12 @@
 /* react */
 import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+/* pages  */
 import Error from '../pages/Error/error'
-import Home from '../pages/Home/Home'
-import Rental from '../pages/Rental/Rental'
+import Home from '../pages/Home/home'
+import Rental from '../pages/Rental/rental'
+import About from '../pages/About/about'
+
 
 export default function Router() {
     return (
@@ -19,35 +22,4 @@ export default function Router() {
   }
   
   
-  function About() {
-    return (
-      <>
-        <main>
-          <h2>Who are we?</h2>
-          <p>
-            That feels like an existential question, don't you
-            think?
-          </p>
-        </main>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-      </>
-    );
-  }
-  
-//   function Error() {
-//     return (
-//       <>
-//         <main>
-//           <h2>Erreur</h2>
-//           <p>
-//             Oups... Cette page n'existe pas
-//           </p>
-//         </main>
-//         <nav>
-//           <Link to="/">Home</Link>
-//         </nav>
-//       </>
-//     );
-//   }
+ 

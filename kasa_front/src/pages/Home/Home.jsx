@@ -44,7 +44,7 @@ export default function Home() {
   
     return (
       <div className="container_home">
-        <Banner textContent="Chez vous, partout et ailleurs" />
+        <Banner type="accueil" textContent="Chez vous, partout et ailleurs" />
         <main className="container_cards">
           {Rentals.map((rental) => (
             <article key={rental.id} className="article__card">

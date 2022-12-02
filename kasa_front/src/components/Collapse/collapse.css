@@ -1,0 +1,98 @@
+.accordion-item {
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
+}
+  
+.accordion-item.collapsed {
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+  
+.button {
+    font-weight: 500;
+    font-size: 1.13rem;
+    line-height: 25.67px;
+    cursor: pointer;
+    color : var(--tertiary-color);
+    background-color:var(--primary-color); ;
+    padding: 0.5em 1.5em;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+ 
+
+ 
+    /* .buttonMedium::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid currentColor;
+    } */
+  
+    /* .buttonMedium:hover,
+    .buttonMediumopen {
+      color: black;
+    } */
+  
+    /* .buttonMedium open::after {
+        content: "";
+        border-top: 0;
+        border-bottom: 5px solid;
+      } */
+    
+  
+  
+.accordion-content {
+    padding: 1em 1.5em;    
+    background-color: #F6F6F6;
+    color : var(--primary-color);
+    margin-top: -10px;
+}
+
+.big {
+    width: 98%;
+    font-size: 1.13rem;
+    font-weight: 400;
+}
+
+.medium {
+    width: 50%;
+    font-size: 1.13rem;
+    font-weight: 400;
+}
+
+.small {
+    width: 50%;
+    font-size: 1.13rem;
+    font-weight: 400;
+}
+
+
+@media screen and (width < 800px) {
+    .button{
+        margin-bottom: 15px;
+        font-size: 0.82rem;
+        line-height: 18.54px;
+    }
+
+    .accordion-content {
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 17.11px;
+
+    }
+
+    svg{
+        width : 9px;
+        height : 15px;
+    }
+}
+  

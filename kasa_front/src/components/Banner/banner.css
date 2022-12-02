@@ -20,7 +20,7 @@
   .banner__background {
     border-radius: 10px;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;    
   }
   
@@ -35,12 +35,18 @@
     .banner__cover,
     .banner__background {
       width: 100%;
-      height: 111px;
       margin-bottom: 60px;
     }
 
-    .banner__background {
-        background-image: url('../../assets/home-background-mobile.png')
+    .banner__background.accueil {
+        background-image: url('../../assets/home-background-mobile.png');
+        height: 111px;
+    }
+
+    .banner__background.apropos {
+      background-image: url('../../assets/banner-apropos-mobile.png');
+      height:278px;
+      object-fit: contain;
     }
 
     .banner__text {
@@ -64,14 +70,23 @@
     }
 
     .banner__background {
-        background-image: url('../../assets/home-background.png');
         object-fit: cover;
         background-size: cover;
         background-repeat: no-repeat;
         /* position: relative; */
         margin-top: 10px;
     }
-  
+
+    .banner__background.accueil {
+      background-image: url('../../assets/home-background.png');
+
+    }
+
+    .banner__background.apropos {
+      background-image: url('../../assets/banner-apropos-destkop.png');
+    }
+
+ 
     .banner__text {
       font-size: 2rem;
       left: 110px;

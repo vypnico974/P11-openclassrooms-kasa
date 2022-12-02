@@ -1,0 +1,30 @@
+.tag__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag__tags{
+min-width: 115px;
+min-height: 18px;
+list-style-type: none;
+font-size:0.63rem;
+margin: 5px 10px 10px 0;
+padding: 5px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: var(--primary-color);
+border-radius: 5px;
+color:var(--tertiary-color);
+}
+
+@media screen and (min-width : 800px) {
+    .tag__tags{
+        font-size: 0.88rem;
+        line-height: 19.96px;
+        border-radius: 10px;
+        min-width: 84px;
+        min-height: 18px;
+    }
+}
