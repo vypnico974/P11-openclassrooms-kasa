@@ -7,7 +7,6 @@ import Home from '../pages/Home/home'
 import Rental from '../pages/Rental/rental'
 import About from '../pages/About/about'
 
-
 export default function Router() {
     return (
       <div>          

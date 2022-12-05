@@ -34,6 +34,10 @@
     width: 100%;
 }
 
+
+
+
+
 @media screen and (width < 887px) {
 	.container_picture{
         height:255px;        
@@ -57,6 +61,4 @@
     .container_text{
         display: none;
     }
-
-
 }

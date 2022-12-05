@@ -25,31 +25,23 @@
     border-radius: 10px;
 }
 
- 
+.button.small.oval{
+    height: 100px;
+    width : 150px;    
+    border-radius: 50%;
+}
 
+.button.big.oval{
+    width : 100%; 
+    height: 50px;   
+    border-radius: 50%;
+}
+
+.button.square{
+    width: 150px;
+    height: 150px;
+}
  
-    /* .buttonMedium::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid currentColor;
-    } */
-  
-    /* .buttonMedium:hover,
-    .buttonMediumopen {
-      color: black;
-    } */
-  
-    /* .buttonMedium open::after {
-        content: "";
-        border-top: 0;
-        border-bottom: 5px solid;
-      } */
-    
-  
-  
 .accordion-content {
     padding: 1em 1.5em;    
     background-color: #F6F6F6;
@@ -61,6 +53,7 @@
     width: 98%;
     font-size: 1.13rem;
     font-weight: 400;
+    border-radius: 5px;
 }
 
 .medium {
@@ -70,15 +63,28 @@
 }
 
 .small {
-    width: 50%;
+    width: 25%;
     font-size: 1.13rem;
     font-weight: 400;
 }
 
 
+ 
+@media screen and (min-width : 800px) {
+    .container__collapse{
+        margin-bottom : 30px;
+        /* padding-right: 109px; */
+        /* padding-left: 108px; */
+    }
+
+}
+
 @media screen and (width < 800px) {
+    .container__collapse{
+        margin-bottom : 30px;
+      
+    }
     .button{
-        margin-bottom: 15px;
         font-size: 0.82rem;
         line-height: 18.54px;
     }
@@ -87,12 +93,11 @@
         font-weight: 400;
         font-size: 0.75rem;
         line-height: 17.11px;
-
     }
 
     svg{
         width : 9px;
         height : 15px;
     }
+
 }
-  

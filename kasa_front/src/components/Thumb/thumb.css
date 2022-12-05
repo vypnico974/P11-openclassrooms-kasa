@@ -5,9 +5,7 @@
   .thumb,
   .thumb__img {
     height: 255px;
-    width: 335px;
-    margin-left: 5px;
-    /* overflow: hidden; */
+    width: 100%;
   }
 
    
@@ -19,7 +17,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    margin-left: 5px;
+    /* margin-left: 5px; */
   }
   
   .thumb__img {
@@ -37,13 +35,18 @@
     position: absolute;
     width: 295px;
   }
-  
-  @media screen and (min-width: 1440px) {
+
+  @media screen and (min-width: 700px) {
+
     .thumb,
-    .thumb__img {
-      height: 340px;
+    .thumb__img,
+    .thumb__cover {
+      margin-left: 5px;
       width: 340px;
     }
+  }
+  
+  @media screen and (min-width: 1440px) {
 
     .thumb__text {
         width: 300px;

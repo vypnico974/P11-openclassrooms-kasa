@@ -1,59 +1,48 @@
 /* react */
-import React from "react";
+import React from "react"
 /* composant */
 import Banner from '../../components/Banner/Banner'
 import Thumb from '../../components/Thumb/Thumb'
+import Error from "../Error/error"
+import Spinner from "../../components/Spinner/Spinner"
 /* css */
 import './home.css'
-/*  data location */
-import Rentals from '../../datas/rentals.json'
+import bannerHome from '../../assets/home-background.png'
+import bannerHomeMobile from '../../assets/home-background-mobile.png'
+/*  fetch data */
+import useFetch from "../../util/fetch"
 
 
-/*composant react :  state (état, données)
-                     comportements
-                     affichage(render) */
 export default function Home() {
 
-// async function getRental() {
-    // try{
-    //     const response = await fetch(data_kasa)
-    //     /* attendre la résolution de la promesse  */
-    //     const data = await response.json()
-    //     return data
-    // }
-    // catch(err) {
-    //     /* affichage erreur */
-    //     console.log("Une erreur se produit :", err)  
-    // }   
-    
-    // const response = await fetch('../../datas/rentals.json')
-    // const data = await response.json()       
-    // return data
-
-//  }
-
-
-// const data_rentals = getRental()
-// const fetchHousings = {
-//   all: () => JSONFILE,
-//   one: (id) => JSONFILE.find(house => house.id === id)
-// }
-// const data = fetchHousings.all
-// console.log(data.id)
+  /* connexion json */
+  const { data, hasError, errorType, isLoading } = useFetch('http://localhost:3000/rentals.json')
+  // console.log(data)
 
   
+  if (!data){ /* si donnée vide, affichage de la page 404 */
+    return <Error />
+  }
+  if (isLoading){ /* si chargement en cours, affichage spinner chargement */
+    return <Spinner title="" typeLoader="loader-1" />
+  }
+  if (hasError){ /* si erreur de connexion  */
+  console.log(errorType)
+    return <div className="error">Oups! Une erreur est survenue</div>
+  }
+
     return (
-      <div className="container_home">
-        <Banner type="accueil" textContent="Chez vous, partout et ailleurs" />
-        <main className="container_cards">
-          {Rentals.map((rental) => (
-            <article key={rental.id} className="article__card">
-              <Thumb title={rental.title} cover={rental.cover} id={rental.id} key={rental.id} />
-            </article>
-          ))}
-
-
-        </main>
+    <div>
+       <div className="container__home">
+            <Banner source={bannerHome} source_mobile={bannerHomeMobile} type="accueil" textContent="Chez vous, partout et ailleurs" />
+              <main className="container__cards">
+                {data.map((rental) => (
+                  <article key={rental.id} className="article__card">
+                    <Thumb title={rental.title} cover={rental.cover} id={rental.id} key={rental.id} />
+                  </article>
+                ))}
+              </main>
+            </div>
       </div>
-    );
+  )
 }

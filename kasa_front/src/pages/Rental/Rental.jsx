@@ -1,6 +1,5 @@
 /*  react  */
-import React from "react";
-import { useEffect, useState } from 'react'
+import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router-dom';
 /* composants  */
 import Carrousel from '../../components/Carrousel/Carrousel'
@@ -9,72 +8,80 @@ import Tag from '../../components/Tag/Tag'
 import Rate from '../../components/Rate/Rate'
 import Host from '../../components/Host/Host'
 import Collapse from '../../components/Collapse/Collapse'
+import Error from "../Error/error";
+import Spinner from "../../components/Spinner/Spinner";
 /* css  */
 import './rental.css'
-/* json */
-import Rental_data from '../../datas/rentals.json'
+/*  fetch data */
+import useFetch from "../../util/fetch"
+
 
 export default function Rental() {
-
-  const { currentId } = useParams();
-  // console.log(currentId)
-  const rentalFilterId = Rental_data.find((rental) => rental.id === currentId)
-  // console.log(rentalFilterId)
-  // console.log("nbre d image :"+rentalFilterId.pictures.length)
-
-  const [rental_data, setRental_data] = useState([])
-  const [error, setError] = useState(false)
-  const [isDataLoading, setDataLoading] = useState(true)
-
+   
+  const {currentId} = useParams()  /* récupérer la valeur Id dans l'URL  */
+  const [filterIdData, setFilterIdData] = useState();
+  const [ErrorIdData, setErrorIdData] = useState(false);
+ 
+  const { data, hasError, errorType, isLoading } = useFetch('http://localhost:3000/rentals.json')
+  // console.log("les données:",data)
+  // console.log(errorType)
+  // console.log("chargement:", isLoading)
   useEffect(() => {
-      async function getRental() {
-          setDataLoading(true)
-          try {
-              const response = await fetch('../../datas/rentals.json')
-              const rentals = await response.json()
-              setRental_data(rentals)
-              
-          } catch (err) {
-              console.log(err)
-              setError(true)
-              
-          } finally {
-              setDataLoading(false)
-          }
-      }
-      getRental()
-  }, [])
+    if (data.length > 0) {
+      const rentalFilterId = data.find((rental) => rental.id === currentId)
+      setFilterIdData(rentalFilterId)
+      if (!rentalFilterId) {setErrorIdData(true)}
+      
+    }
+  }, [currentId, data, hasError, errorType ]);
 
+ 
+  /*  si pas de location correspondant à l' id, affichage de la page "page n'existe pas" */
+  if (!filterIdData && ErrorIdData) {
+    return <Error />
+  }
 
   return (
     <main className="container__rental">
-       
-        <Carrousel rentalFilterId={rentalFilterId} />   
+
+       { isLoading ? (<Spinner title="" typeLoader="loader-1" />) : (
+
+        filterIdData && (
+        <div>
+           <Carrousel rentalFilterId={filterIdData} />   
         <div className="container__rental__info">
           <section>
-             <Info title={rentalFilterId.title} location={rentalFilterId.location} />
-            <Tag id={rentalFilterId.id} tags={rentalFilterId.tags} />
+             <Info title={filterIdData.title} location={filterIdData.location} />
+            <Tag id={filterIdData.id} tags={filterIdData.tags} />
           </section>
           <aside className="container_rental_aside">
-            <Rate id={rentalFilterId.id} rating={rentalFilterId.rating} />
-            <Host host={rentalFilterId.host} rating={rentalFilterId.rating} />
+            <Rate id={filterIdData.id} rating={filterIdData.rating} />
+            <Host host={filterIdData.host} rating={filterIdData.rating} />
           </aside>  
         </div> 
         <div className="container__rental__collapse">
           <div className="collapse">
-            <Collapse formatting={"big"} title="Description" children={rentalFilterId.description} />
+            <Collapse formatting={"big"} title="Description" children={filterIdData.description} />
           </div>
           <div className="collapse">
             <Collapse formatting={"big"} title="Équipements" 
             children={
               <ul>
-                {rentalFilterId.equipments.map((equipment,index) => <li key={`${equipment}-${index}`}>{equipment}</li>)}
+                {filterIdData.equipments.map((equipment,index) => <li key={`${equipment}-${index}`}>{equipment}</li>)}
               </ul>           
             } />
           </div>        
         </div>
+      </div> )
+
+       )
+
+       }
         
-        
+       
+  
+      
+
     </main>
   );
 }

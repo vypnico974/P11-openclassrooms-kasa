@@ -1,8 +1,8 @@
-.container_home{
+.container__home{
     width: 100%;
 }
 
-.container_cards{
+.container__cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,34 +12,60 @@
     border-radius: 25px;
     padding: 56px 20px;
 }
-@media screen and (min-width: 768px) {
-    .container_cards{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
 
+.error{
+    color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20%;
+    margin-top: 20%;
+    font-size: 2rem;
 }
 
 .article__card{
     margin-bottom: 20px;
 }
-@media screen and (min-width: 996px) {
-	.container_home{
+@media screen and (min-width: 668px) {
+	.container__home{
         padding-left: 100px;
         padding-right: 100px;
     }
-}
-@media screen and (min-width:668px) and (width < 996px){
-	.container_home{
-        padding-left: 25px;
-        padding-right: 25px;
+
+    .article__card{
+        margin-left: 5px;
     }
 }
 
 @media screen and (width < 668px) {
-	.container_home{
+	.container__home{
         padding-left: 20px;
         padding-right: 20px;
     }	
+    .container__cards{
+        margin:0px;
+        padding-left: 0px;
+        padding : 0px;
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    /* .article__card{
+        margin-left: 60px;
+    } */
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .article__card{
+        margin-bottom: 60px;
+    }
+
 }

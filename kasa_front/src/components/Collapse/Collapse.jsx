@@ -11,7 +11,7 @@ export default function Collapse({ formatting,title, children }) {
         widthSvg = 15
         heightSvg = 5  } 
   return (
-    <div>
+    <div className="container__collapse">
       
     <button
       className={`button ${formatting} ${isOpen ? "open" : ""}  `}

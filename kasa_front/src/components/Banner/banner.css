@@ -9,18 +9,21 @@
   .banner__cover {
     background-color: black;
     border-radius: 10px;
-    height: 100%;
+    height: 111px;
     left: 0;
     opacity: 0.3;
     position: absolute;
     top: 0;
     width: 100%;
   }
+  .banner__cover.apropos{
+    opacity: 0;
+  }
   
   .banner__background {
     border-radius: 10px;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     width: 100%;    
   }
   
@@ -30,23 +33,23 @@
     position: absolute;
    }
 
-@media screen and (width < 645px){
+@media screen and (width < 850px){
     .banner,
     .banner__cover,
     .banner__background {
       width: 100%;
-      margin-bottom: 60px;
+    
     }
 
     .banner__background.accueil {
-        background-image: url('../../assets/home-background-mobile.png');
+        /* background-image: url('../../assets/home-background-mobile.png'); */
         height: 111px;
     }
 
     .banner__background.apropos {
-      background-image: url('../../assets/banner-apropos-mobile.png');
+      /* background-image: url('../../assets/banner-apropos-mobile.png'); */
       height:278px;
-      object-fit: contain;
+     
     }
 
     .banner__text {
@@ -58,7 +61,7 @@
     }
 }
 
-  @media screen and (min-width:645px){
+  @media screen and (min-width:850px){
     .banner,
     .banner__cover,
     .banner__background {
@@ -74,17 +77,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         /* position: relative; */
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
-    .banner__background.accueil {
-      background-image: url('../../assets/home-background.png');
+    /* .banner__background.accueil {
+       background-image: url('../../assets/home-background.png')
 
     }
 
     .banner__background.apropos {
-      background-image: url('../../assets/banner-apropos-destkop.png');
-    }
+       background-image: url('../../assets/banner-apropos-destkop.png')
+    } */
 
  
     .banner__text {

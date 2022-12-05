@@ -10,14 +10,30 @@ header {
 	height: 68px;
 }
 
-.link {
-	text-decoration:none;
-	color: var(--primary-color);
-}
-.link:hover {
-	text-decoration:underline;
+li a, li a:link {
+	outline: none;
+	text-decoration: none;
 }
 
+  
+.link {
+	text-decoration:none;
+	outline: none;
+	color: var(--primary-color);
+}
+
+.ActiveLink {
+	text-decoration:none;
+	outline: none;
+	color: yellow;
+}
+/* .link:link,.link:visited, .link:hover,.link:active{
+	text-decoration:none;
+} */
+
+/* .link:hover, .link:active {
+	border-bottom: 1px solid;
+  } */
 
 .header__nav__ul{
 	align-items: center;
