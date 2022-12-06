@@ -6,10 +6,9 @@ import './carrousel.css'
 import arrowLeft from '../../assets/arrow-left.svg'
 import arrowRight from '../../assets/arrow-right.svg'
 
-/*composant react :  state (état, données)
-                     comportements
-                     affichage(render) */
-export default function Carrousel({rentalFilterId}) {
+
+export default function Carrousel({rentalFilterId,formatting}) {
+  /* exemple formatting = "medium"  */
 
     const [current, setCurrent]= useState(0)
     const length = rentalFilterId.pictures.length;
@@ -22,7 +21,7 @@ export default function Carrousel({rentalFilterId}) {
         setCurrent(current===0 ? length-1 : current-1)
     }
 
-
+    
     return length > 1 ? (
         // flèches suivant et précèdent si plusieurs images
         <div className="container__carrousel">  
@@ -31,7 +30,7 @@ export default function Carrousel({rentalFilterId}) {
             <img className="arrow-right" src={arrowRight} alt="Suivant" onClick={nextPicture} />
             {rentalFilterId.pictures.map((picture, index)=>
             index===current &&
-            (<img className="container_picture" src={picture} alt="photos de la location" key={index} />)
+            (<img className={`container_picture ${formatting}`} src={picture} alt="photos de la location" key={index} />)
             )}
             <span className="container_text" >{current+1}/{length}</span> 
                        

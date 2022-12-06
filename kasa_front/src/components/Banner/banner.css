@@ -3,113 +3,88 @@
     margin-bottom: 20px;
     position: relative;
     width: 100%;
-    /* background-color: blueviolet; */
-    }
+}
+.banner__cover {
+  background-color: black;
+  border-radius: 10px;
+  height: 111px;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.banner__cover.apropos{
+  opacity: 0.3;
+}
+.banner__background {
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;    
+}
   
-  .banner__cover {
-    background-color: black;
-    border-radius: 10px;
-    height: 111px;
-    left: 0;
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .banner__cover.apropos{
-    opacity: 0;
-  }
-  
-  .banner__background {
-    border-radius: 10px;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;    
-  }
-  
-  .banner__text {
-    color: white;
-    font-weight: 500;
-    position: absolute;
-   }
-
-@media screen and (width < 850px){
-    .banner,
-    .banner__cover,
-    .banner__background {
-      width: 100%;
-    
-    }
-
-    .banner__background.accueil {
-        /* background-image: url('../../assets/home-background-mobile.png'); */
-        height: 111px;
-    }
-
-    .banner__background.apropos {
-      /* background-image: url('../../assets/banner-apropos-mobile.png'); */
-      height:278px;
-     
-    }
-
-    .banner__text {
-        font-size: 1.5rem;
-        left: 20px;
-        top: 30px;
-        width: 217px;
-        position: absolute;
-    }
+.banner__text {
+  color: white;
+  font-weight: 500;
+  position: absolute;
 }
 
-  @media screen and (min-width:850px){
-    .banner,
-    .banner__cover,
-    .banner__background {
-      margin-top: 20px;
-      width: 100%;
-      height: 223px;
-      margin-bottom: 60px;
-      border-radius: 25px;
-    }
+@media screen and (width < 850px){
+  .banner,
+  .banner__cover,
+  .banner__background {
+    width: 100%;
+}
+  .banner__background.accueil {
+    height: 111px;
+  }
+  .banner__background.apropos, .banner__cover.apropos {
+    height:278px;     
+  }
+  .banner__text {
+    font-size: 1.5rem;
+    left: 20px;
+    top: 30px;
+    width: 217px;
+    position: absolute;
+  }
+}
 
-    .banner__background {
-        object-fit: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* position: relative; */
-        margin-top: 0px;
-    }
-
-    /* .banner__background.accueil {
-       background-image: url('../../assets/home-background.png')
-
-    }
-
-    .banner__background.apropos {
-       background-image: url('../../assets/banner-apropos-destkop.png')
-    } */
-
- 
-    .banner__text {
-      font-size: 2rem;
-      left: 110px;
-      top: 100px;
-      width: 635px;
-    }
-
-    .banner__cover{
-        margin-top: 0;
-    }
+@media screen and (min-width:850px){
+  .banner,
+  .banner__cover,
+  .banner__background {
+    margin-top: 20px;
+    width: 100%;
+    height: 223px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+  }
+  .banner__background {
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+  }
+  .banner__text {
+    font-size: 2rem;
+    left: 110px;
+    top: 100px;
+    width: 635px;
+  }
+  .banner__cover{
+    margin-top: 0;
+  }
 }
   
 @media screen and (width > 1300px) {
-
-    .banner__text {
-      font-size: 3rem;
-      left: 230px;
-      top: 100px;
-      width: 705px;
-    }
+  .banner__text {
+    font-size: 3rem;
+    left: 230px;
+    top: 100px;
+    width: 705px;
+  }
 }
 
    

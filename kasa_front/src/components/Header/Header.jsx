@@ -1,34 +1,27 @@
 /* react */
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom"; //NavLink 
 /* logo */
-import logo from "../../assets/kasa_logo.svg";
+// import logo from "../../assets/kasa_logo.svg";
 /* css */
-import cssClass from './header.css'
+import './header.css'
 
 
 
-export default function Header() {
+export default function Header({picture,linkPicture,arrayNav,formatting}) {
+  /* exemple formatting = "small"  */
   return (
-    <header>
-      <Link to={"/"}>
-        <img className="header__logo" src={logo} alt="Logo Kasa" />
-      </Link>
-        <nav>
-          <ul className="header__nav__ul">
-          <li className="header__nav__ul--li"><Link className="link" to={"/"}>Accueil</Link></li>
-          <li className="header__nav__ul--li"><Link className="link" to={"/about"}>A Propos</Link></li>
-          
-          <li className="header__nav__ul--li">
-          <NavLink
-          to="/"
-          className={({ isActive }) => {
-            return isActive ? cssClass.ActiveLink : cssClass.nonActiveLink;
-          }}
-        >
-          Accueil
-        </NavLink>
-        </li>
+    <header className={`container__header ${formatting}`}>
+      { picture &&
+        <Link to={linkPicture}>
+        <img className={`header__logo ${formatting}`} src={picture} alt="Logo" />
+      </Link> 
+      }
+      <nav>
+        <ul className="header__nav__ul">
+        {arrayNav.map((nav, index) => (
+          <li className="header__nav__ul--li" key={`${index}-${nav.linkNav}`}><Link className="link" to={nav.linkNav}>{nav.titleNav}</Link></li> 
+        ))}
         {/* <li className="header__nav__ul--li">
         <NavLink
           to="/about"

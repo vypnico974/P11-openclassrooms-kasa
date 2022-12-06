@@ -24,7 +24,7 @@ export default function Home() {
     return <Error />
   }
   if (isLoading){ /* si chargement en cours, affichage spinner chargement */
-    return <Spinner title="" typeLoader="loader-1" />
+    return <Spinner title="" typeLoader="loader-1" formatting=""/>
   }
   if (hasError){ /* si erreur de connexion  */
   console.log(errorType)

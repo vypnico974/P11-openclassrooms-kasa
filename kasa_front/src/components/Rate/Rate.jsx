@@ -5,7 +5,8 @@ import './rate.css'
 import starOn from '../../assets/StarOn.svg'
 import starOff from '../../assets/StarOff.svg'
 
-export default function Rate({id,rating}) {
+export default function Rate({id,rating, formatting}) {
+  /*  exemple formatting = "starBig" */
 
   const maxRating = 5 //note max
   let starArray = [] // pour stocker les images étoiles de la note
@@ -24,10 +25,10 @@ export default function Rate({id,rating}) {
     <div className="container__rate">
         <span className="rate__stars">
             {starArray.map((star,index) => 
-                <img src={star} alt="note" key={`${id}-${index}`} className="rate__star" />        
+                <img src={star} alt="note" key={`${id}-${index}`} className={`rate__star ${formatting}`} />        
             
             )} 
-       </span>
+       </span>   
     
     </div>
   );

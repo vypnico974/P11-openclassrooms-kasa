@@ -4,7 +4,6 @@
     display: flex;
     margin-top: 24px;
 }
-
 .host__name{
     font-size: 1.13rem;
     line-height: 25.67px;
@@ -13,12 +12,14 @@
     margin-right: 10px;
     margin-top: 5px;
 }
-
 .host__photo{
     width: 64px;
     height: 64px;
     border-radius: 32px;
     background-color:#C4C4C4;
+}
+.host__photo.square{   
+    border-radius: 0;
 }
 
 @media screen and (max-width : 800px) {
@@ -32,7 +33,6 @@
         margin-right: 5px;
         margin-top: 0;
     }
-
     .host__photo{
         width: 32px;
         height: 32px;

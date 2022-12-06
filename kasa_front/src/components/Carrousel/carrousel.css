@@ -2,21 +2,18 @@
     display:flex;
     position:relative;
 }
-
 .arrow-left{
     position:absolute;
     top:40%;
     left:1rem;
     cursor: pointer;
 }
-
 .arrow-right{
     position:absolute;
     top:40%;
     right:2rem;
     cursor: pointer;
 }
-
 .container_text{
     position: absolute;
     top: 85%;
@@ -26,37 +23,36 @@
     font-weight: 500;
     line-height: 25.67px;
 }
-
 .container_picture{
     height:415px;
     border-radius: 25px;
     object-fit:cover;
     width: 100%;
 }
-
-
-
-
+.container_picture.medium{
+    height:200px;
+}
 
 @media screen and (width < 887px) {
 	.container_picture{
-        height:255px;        
+        height:255px;
+        border-radius: 10px;        
+    }
+    .container_picture.medium{
+        height:150px;
     }
     .arrow-left,
     .arrow-right {
         width:21.7px;
         height : 29.8px;
-
     }
 }
 
 @media screen and (width < 487px) {
-
     .arrow-left,
     .arrow-right {
         width:11.7px;
         height : 19.8px;
-
     }
     .container_text{
         display: none;

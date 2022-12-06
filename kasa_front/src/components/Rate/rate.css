@@ -6,17 +6,23 @@
     height: 15px;
     width: 15px;
 }
+.rate__star.starBig {
+    height: 25px;
+    width: 25px;
+}
 
 .rate__stars {
   display: flex;
 }
 
-
-
 @media screen and (min-width : 800px) {
     .rate__star {
         height: 30px;
         width: 30px;
+    }
+    .rate__star.starBig {
+        height: 80px;
+        width: 80px;
     }
     .container__rate{
         margin-top: 24px;

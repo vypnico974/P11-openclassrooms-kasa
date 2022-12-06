@@ -3,7 +3,7 @@ import React, {useState} from "react";
 /* css  */
 import './collapse.css'
 
-export default function Collapse({ formatting,title, children }) {
+export default function Collapse({ title, children,formatting }) {
     const [isOpen, setOpen] = useState(false)
     let widthSvg = 25
     let heightSvg = 15

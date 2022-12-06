@@ -18,6 +18,11 @@ background-color: var(--primary-color);
 border-radius: 5px;
 color:var(--tertiary-color);
 }
+.tag__tags.tagCircle{
+    min-width: 115px;
+    min-height: 115px;
+    border-radius: 50%;
+}
 
 @media screen and (min-width : 800px) {
     .tag__tags{

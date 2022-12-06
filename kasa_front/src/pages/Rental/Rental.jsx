@@ -44,44 +44,37 @@ export default function Rental() {
   return (
     <main className="container__rental">
 
-       { isLoading ? (<Spinner title="" typeLoader="loader-1" />) : (
+       { isLoading ? (<Spinner title="" typeLoader="loader-1" formatting="" />) : (
 
         filterIdData && (
         <div>
-           <Carrousel rentalFilterId={filterIdData} />   
+           <Carrousel rentalFilterId={filterIdData} formatting="" />   
         <div className="container__rental__info">
           <section>
-             <Info title={filterIdData.title} location={filterIdData.location} />
-            <Tag id={filterIdData.id} tags={filterIdData.tags} />
+             <Info title={filterIdData.title} location={filterIdData.location} formatting="" />
+            <Tag id={filterIdData.id} tags={filterIdData.tags} formatting=""/>
           </section>
           <aside className="container_rental_aside">
-            <Rate id={filterIdData.id} rating={filterIdData.rating} />
-            <Host host={filterIdData.host} rating={filterIdData.rating} />
+            <Rate id={filterIdData.id} rating={filterIdData.rating} formatting="" />
+            <Host host={filterIdData.host} formatting="" />
           </aside>  
         </div> 
         <div className="container__rental__collapse">
           <div className="collapse">
-            <Collapse formatting={"big"} title="Description" children={filterIdData.description} />
+            <Collapse title="Description" children={filterIdData.description} formatting={"big"} />
           </div>
           <div className="collapse">
-            <Collapse formatting={"big"} title="Équipements" 
+            <Collapse title="Équipements" 
             children={
               <ul>
-                {filterIdData.equipments.map((equipment,index) => <li key={`${equipment}-${index}`}>{equipment}</li>)}
+                {filterIdData.equipments.map((equipment,index) => 
+                    <li key={`${equipment}-${index}`}>{equipment}</li>)}
               </ul>           
-            } />
+            } formatting={"big"}  />
           </div>        
         </div>
-      </div> )
-
-       )
-
-       }
-        
-       
-  
-      
-
-    </main>
+      </div> ))
+      }
+   </main>
   );
 }

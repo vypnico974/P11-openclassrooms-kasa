@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function useFetch(url){
     
   const [data, setData] = useState([]);
-  /* hooks pour déterminer si erreur , si chargement à la connexion au fichier json  */
+  /* hooks pour déterminer si erreur et si chargement en cours   */
   const [hasError, setHasError] = useState(false);
   const [errorType, setErrorType] = useState();
   const [isLoading, setIsLoading] = useState(false);
