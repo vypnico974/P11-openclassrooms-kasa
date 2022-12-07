@@ -1,40 +1,49 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container__footer{
     background-color:var(--secondary-color);
     color: var(--tertiary-color);
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* position:absolute; */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 50px;
     width: 100%;
     height: 209px; 
 }
-
 .container__footer.medium{
     height: 110px;
     width:100%
 }
-
 .footer__logo{
-    /* position:absolute; */
     margin-top: 66px;
     width: 122px;
     height: 39.44px;
 }
-.footer__logo.medium{
-    /* position:absolute; */
+.footer__logo.mediumFooter{
     margin-top: 15px;
     width: 60px;
     height: 20px;
 }
-
 .footer__p{
     font-weight: 500;
     margin-top: 31px;	
-    /* position:absolute; */
-    /* margin-top: 134px;     */
 }
+
 @media screen and (width > 668px) {
     .footer__p{
         font-size: 1.5rem;

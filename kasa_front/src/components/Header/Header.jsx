@@ -1,15 +1,13 @@
 /* react */
-import React from "react";
-import { Link } from "react-router-dom"; //NavLink 
-/* logo */
-// import logo from "../../assets/kasa_logo.svg";
+import React from "react"
+import { Link } from "react-router-dom" //NavLink 
 /* css */
 import './header.css'
 
 
 
 export default function Header({picture,linkPicture,arrayNav,formatting}) {
-  /* exemple formatting = "small"  */
+  /* exemple formatting = "smallHeader"  */
   return (
     <header className={`container__header ${formatting}`}>
       { picture &&

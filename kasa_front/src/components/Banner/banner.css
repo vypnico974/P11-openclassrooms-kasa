@@ -1,11 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .banner {
-    border-radius: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
 }
 .banner__cover {
-  background-color: black;
+  background-color: var(--secondary-color);
   border-radius: 10px;
   height: 111px;
   left: 0;
@@ -14,33 +21,30 @@
   top: 0;
   width: 100%;
 }
-.banner__cover.apropos{
-  opacity: 0.3;
-}
 .banner__background {
   border-radius: 10px;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;    
 }
-  
 .banner__text {
-  color: white;
+  color: var(--tertiary-color);
   font-weight: 500;
   position: absolute;
 }
 
-@media screen and (width < 850px){
+@media screen and (max-width : 850px){
   .banner,
   .banner__cover,
   .banner__background {
     width: 100%;
-}
-  .banner__background.accueil {
+  }
+  .banner__background.bannerHome {
     height: 111px;
   }
-  .banner__background.apropos, .banner__cover.apropos {
-    height:278px;     
+  .banner__background.bannerAbout, .banner__cover.bannerAbout {
+    height:223px;     
   }
   .banner__text {
     font-size: 1.5rem;
@@ -62,9 +66,8 @@
     border-radius: 25px;
   }
   .banner__background {
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+    -o-object-fit: cover;
+      object-fit: cover;
     margin-top: 0px;
   }
   .banner__text {
@@ -77,7 +80,7 @@
     margin-top: 0;
   }
 }
-  
+
 @media screen and (width > 1300px) {
   .banner__text {
     font-size: 3rem;
@@ -86,5 +89,3 @@
     width: 705px;
   }
 }
-
-   

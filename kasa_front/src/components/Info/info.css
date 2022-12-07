@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container__info{
     color: var(--primary-color);
     font-weight: 500;
@@ -20,7 +27,6 @@
     font-size: 1rem;
     line-height: 25px;
 }
-
 
 @media screen and (max-width : 800px) {
     .info__title{

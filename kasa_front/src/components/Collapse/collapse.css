@@ -1,15 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .accordion-item {
     overflow: hidden;
+    -webkit-transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    -o-transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
     transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
     height: auto;
     max-height: 9999px;
 }
-  
 .accordion-item.collapsed {
     max-height: 0;
+    -webkit-transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+    -o-transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
     transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
 }
-  
 .button {
     font-weight: 500;
     font-size: 1.13rem;
@@ -19,85 +28,103 @@
     background-color:var(--primary-color); ;
     padding: 0.5em 1.5em;
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 10px;
 }
-
 .button.small.oval{
     height: 100px;
     width : 150px;    
     border-radius: 50%;
 }
-
 .button.big.oval{
     width : 100%; 
     height: 50px;   
     border-radius: 50%;
 }
-
 .button.square{
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
+    font-size: 1rem;
 }
- 
 .accordion-content {
     padding: 1em 1.5em;    
     background-color: #F6F6F6;
     color : var(--primary-color);
     margin-top: -10px;
 }
-
+.accordion-content.rentalBig {
+    min-height: 239px;
+}
 .big {
     width: 98%;
     font-size: 1.13rem;
     font-weight: 400;
+    border-radius: 10px;
+}
+.rentalBig {
+    width: 98%;
+    font-size: 1.13rem;
+    line-height: 25.67px;
+    font-weight: 400;
+    border-radius: 10px;
+}
+.Aboutbig {
+    width: 98%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 34.22px;
     border-radius: 5px;
 }
-
 .medium {
     width: 50%;
     font-size: 1.13rem;
     font-weight: 400;
 }
-
 .small {
     width: 25%;
     font-size: 1.13rem;
     font-weight: 400;
 }
 
-
- 
 @media screen and (min-width : 800px) {
     .container__collapse{
         margin-bottom : 30px;
-        /* padding-right: 109px; */
-        /* padding-left: 108px; */
     }
-
 }
 
 @media screen and (width < 800px) {
     .container__collapse{
         margin-bottom : 30px;
-      
     }
     .button{
         font-size: 0.82rem;
         line-height: 18.54px;
     }
-
     .accordion-content {
         font-weight: 400;
         font-size: 0.75rem;
         line-height: 17.11px;
     }
-
     svg{
         width : 9px;
         height : 15px;
     }
-
+    .rentalBig {
+        width: 98%;
+        font-size: 0.75rem;
+        line-height: 17.11px;
+        font-weight: 400;
+        border-radius: 5px;
+    }
+    .accordion-content.rentalBig {
+        min-height: 0;
+    }
 }

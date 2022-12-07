@@ -1,11 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
   /* règles d'espacements pour l' accessibilité*/ 
   /* line-height: 1.5 ;
   letter-spacing: 0.12em ;
   word-spacing: 0.16em ; */
   
-  box-sizing: border-box;
-  max-width: 1464px;
+  -webkit-box-sizing: border-box;
+  
+          box-sizing: border-box;
+  max-width: 1864px;
  }
 /* couleurs  */
  :root {
@@ -35,7 +44,8 @@ h1,h2,p,ul {
 }
 
 ul {
-  padding-inline-start: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
   list-style-type: none;
 }
 .link {
@@ -46,13 +56,16 @@ ul {
   text-decoration: underline;
 }
 
-/**   pour centrer l'ensemble de la page pour les écrans>1464px */
-@media screen and (min-width:1464px){
+/**   pour centrer l'ensemble de la page pour les écrans>1864px */
+@media screen and (min-width:1864px){
   html {
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     }
 }
-

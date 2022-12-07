@@ -1,6 +1,6 @@
-/* import react  */
-import React from "react";
-/* import  css  */
+/* react  */
+import React from "react"
+/* css  */
 import './spinner.css'
 
 export default function Spinner({title, typeLoader, formatting}) {
@@ -10,5 +10,5 @@ export default function Spinner({title, typeLoader, formatting}) {
         <h1>{title}</h1>
         <div className={`loader ${formatting}`} id={typeLoader}></div>  
     </div>
-  );
+  )
 }   

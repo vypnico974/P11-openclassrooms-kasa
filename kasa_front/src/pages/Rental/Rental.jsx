@@ -1,6 +1,6 @@
 /*  react  */
-import React, {useState, useEffect} from "react";
-import { useParams } from 'react-router-dom';
+import React, {useState, useEffect} from "react"
+import { useParams } from 'react-router-dom'
 /* composants  */
 import Carrousel from '../../components/Carrousel/Carrousel'
 import Info from '../../components/Info/Info'
@@ -8,8 +8,9 @@ import Tag from '../../components/Tag/Tag'
 import Rate from '../../components/Rate/Rate'
 import Host from '../../components/Host/Host'
 import Collapse from '../../components/Collapse/Collapse'
-import Error from "../Error/error";
-import Spinner from "../../components/Spinner/Spinner";
+import Spinner from "../../components/Spinner/Spinner"
+/*  page */
+import Error from "../Error/error"
 /* css  */
 import './rental.css'
 /*  fetch data */
@@ -33,10 +34,10 @@ export default function Rental() {
       if (!rentalFilterId) {setErrorIdData(true)}
       
     }
-  }, [currentId, data, hasError, errorType ]);
+  }, [currentId, data, hasError, errorType ])
 
  
-  /*  si pas de location correspondant à l' id, affichage de la page "page n'existe pas" */
+  /*  si pas de location correspondant à l' id, affichage de la page 404 */
   if (!filterIdData && ErrorIdData) {
     return <Error />
   }
@@ -45,7 +46,7 @@ export default function Rental() {
     <main className="container__rental">
 
        { isLoading ? (<Spinner title="" typeLoader="loader-1" formatting="" />) : (
-
+        /* données de la location non vide    */
         filterIdData && (
         <div>
            <Carrousel rentalFilterId={filterIdData} formatting="" />   
@@ -61,7 +62,7 @@ export default function Rental() {
         </div> 
         <div className="container__rental__collapse">
           <div className="collapse">
-            <Collapse title="Description" children={filterIdData.description} formatting={"big"} />
+            <Collapse title="Description" children={filterIdData.description} formatting={"rentalBig"} />
           </div>
           <div className="collapse">
             <Collapse title="Équipements" 
@@ -70,7 +71,7 @@ export default function Rental() {
                 {filterIdData.equipments.map((equipment,index) => 
                     <li key={`${equipment}-${index}`}>{equipment}</li>)}
               </ul>           
-            } formatting={"big"}  />
+            } formatting={"rentalBig"}  />
           </div>        
         </div>
       </div> ))

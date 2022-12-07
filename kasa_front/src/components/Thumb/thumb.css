@@ -1,55 +1,69 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .thumb {
-    position: relative;
-  }
-  
+  position: relative;
+}
+.thumb,
+.thumb__img {
+  height: 255px;
+  width: 100%;
+}
+.thumb__cover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.thumb__img {
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.thumb__img.thumOval {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.thumb__text {
+  bottom: 20px;
+  color: var(--tertiary-color);
+  font-size: 1.13rem;
+  line-height: 25.67px;
+  font-weight: 500;
+  left: 19px;
+  position: absolute;
+  width: 293px;
+}
+
+@media screen and (width > 600px) {
   .thumb,
-  .thumb__img {
-    height: 255px;
-    width: 100%;
-  }
-
-   
+  .thumb__img,
   .thumb__cover {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    /* margin-left: 5px; */
+    width: 340px;
   }
-  
-  .thumb__img {
-    border-radius: 10px;
-    object-fit: cover;
+}
+
+@media screen and (min-width: 700px) {
+  .thumb,
+  .thumb__img,
+  .thumb__cover {
+    margin-left: 5px;
+    width: 340px;
   }
-  
+}
+
+@media screen and (min-width: 1440px) {
   .thumb__text {
-    bottom: 20px;
-    color: var(--tertiary-color);
-    font-size: 1.13rem;
-    line-height: 25.67px;
-    font-weight: 500;
-    left: 20px;
-    position: absolute;
-    width: 295px;
+      width: 300px;
   }
-
-  @media screen and (min-width: 700px) {
-
-    .thumb,
-    .thumb__img,
-    .thumb__cover {
-      margin-left: 5px;
-      width: 340px;
-    }
-  }
-  
-  @media screen and (min-width: 1440px) {
-
-    .thumb__text {
-        width: 300px;
-    }
-  }
-  
+}

@@ -1,6 +1,6 @@
-/* import react  */
-import React from "react";
-/* import  css  */
+/*  react  */
+import React from "react"
+/*  css  */
 import './host.css'
 
 export default function Host({host, formatting}) {
@@ -13,5 +13,5 @@ export default function Host({host, formatting}) {
         <h2 className="host__name">{name} <br /> {lastName}</h2>
       <img src={host.picture} alt={fullName} className={`host__photo ${formatting}`} />
   </div>
-  );
+  )
 }   

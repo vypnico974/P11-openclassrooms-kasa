@@ -1,6 +1,6 @@
 /* react */
-import * as React from "react";
-import { Routes, Route } from "react-router-dom";
+import * as React from "react"
+import { Routes, Route } from "react-router-dom"
 /* pages  */
 import Error from '../pages/Error/error'
 import Home from '../pages/Home/home'
@@ -11,7 +11,7 @@ export default function Router() {
     return (
       <div>          
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/rental/:currentId" element={<Rental />} />
           <Route path="*" element={<Error />} />

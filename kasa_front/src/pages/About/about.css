@@ -1,15 +1,40 @@
-@media screen and (min-width: 768px) {
-    .container_cards{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 .article__card{
     margin-bottom: 20px;
 }
+
+@media screen and (width < 668px) {
+	.container_about{
+        padding-left: 20px;
+        padding-right: 20px;
+    }	
+}
+
+@media screen and (min-width:668px) and (width < 996px){
+	.container_about{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container_cards{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+}
+
 @media screen and (min-width: 996px) {
 	.container_about{
         padding-left: 100px;
@@ -20,16 +45,5 @@
         padding-right: 109px;
     }
 }
-@media screen and (min-width:668px) and (width < 996px){
-	.container_about{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-}
 
-@media screen and (width < 668px) {
-	.container_about{
-        padding-left: 20px;
-        padding-right: 20px;
-    }	
-}
+

@@ -1,7 +1,7 @@
-/* import react  */
-import React from "react";
-import { Link } from "react-router-dom";
-/* import image et css  */
+/* react  */
+import React from "react"
+import { Link } from "react-router-dom"
+/* css  */
 import './error.css'
 
 export default function Error() {
@@ -11,5 +11,5 @@ export default function Error() {
         <p className="error__text">Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/" className="error__link">Retourner sur la page d’accueil</Link>
     </main>
-  );
+  )
 }

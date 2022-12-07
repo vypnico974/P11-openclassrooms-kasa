@@ -1,6 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container__host{
     color: var(--primary-color);
     font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 24px;
 }

@@ -1,7 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container__rate{
     margin-top: 5px;
 }
-
 .rate__star {
     height: 15px;
     width: 15px;
@@ -10,8 +16,9 @@
     height: 25px;
     width: 25px;
 }
-
 .rate__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 

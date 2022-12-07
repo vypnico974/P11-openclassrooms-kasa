@@ -1,6 +1,6 @@
-/* import react  */
-import React from "react";
-/* import  css  */
+/* react  */
+import React from "react"
+/* css  */
 import './tag.css'
 
 export default function Tag({id,tags, formatting}) {
@@ -13,5 +13,5 @@ export default function Tag({id,tags, formatting}) {
         ))}
       </ul>
     </div>
-  );
+  )
 }

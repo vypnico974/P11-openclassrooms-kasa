@@ -1,36 +1,45 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .container__home{
     width: 100%;
 }
-
 .container__cards{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: #F6F6F6;
     margin-top: 43px;
     margin-bottom: 30px;
     border-radius: 25px;
     padding: 56px 20px;
 }
-
 .error{
     color: var(--primary-color);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20%;
-    margin-top: 20%;
+    margin-bottom: 10%;
+    margin-top: 5%;
     font-size: 2rem;
 }
-
 .article__card{
     margin-bottom: 20px;
 }
+
 @media screen and (min-width: 668px) {
 	.container__home{
         padding-left: 100px;
         padding-right: 100px;
     }
-
     .article__card{
         margin-left: 5px;
     }
@@ -51,21 +60,19 @@
 
 @media screen and (min-width: 768px) {
     .container__cards{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
-
-    /* .article__card{
-        margin-left: 60px;
-    } */
-
 }
 
 @media screen and (min-width: 1440px) {
-
     .article__card{
         margin-bottom: 60px;
     }
-
 }

@@ -1,11 +1,12 @@
 /* react */
 import React from "react"
-/* composant */
+/* composants */
 import Banner from '../../components/Banner/Banner'
 import Thumb from '../../components/Thumb/Thumb'
-import Error from "../Error/error"
 import Spinner from "../../components/Spinner/Spinner"
-/* css */
+/* page  */
+import Error from "../Error/error"
+/* css - images */
 import './home.css'
 import bannerHome from '../../assets/home-background.png'
 import bannerHomeMobile from '../../assets/home-background-mobile.png'
@@ -18,11 +19,8 @@ export default function Home() {
   /* connexion json */
   const { data, hasError, errorType, isLoading } = useFetch('http://localhost:3000/rentals.json')
   // console.log(data)
-
   
-  if (!data){ /* si donnée vide, affichage de la page 404 */
-    return <Error />
-  }
+ 
   if (isLoading){ /* si chargement en cours, affichage spinner chargement */
     return <Spinner title="" typeLoader="loader-1" formatting=""/>
   }
@@ -30,15 +28,20 @@ export default function Home() {
   console.log(errorType)
     return <div className="error">Oups! Une erreur est survenue</div>
   }
+  if (!data && !isLoading){ /* si donnée vide, affichage de la page 404 */
+  return <Error />
+}
 
     return (
     <div>
        <div className="container__home">
-            <Banner source={bannerHome} source_mobile={bannerHomeMobile} type="accueil" textContent="Chez vous, partout et ailleurs" />
+            <Banner source={bannerHome} source_mobile={bannerHomeMobile}
+             textContent="Chez vous, partout et ailleurs"  formatting="bannerHome" />
               <main className="container__cards">
                 {data.map((rental) => (
                   <article key={rental.id} className="article__card">
-                    <Thumb title={rental.title} cover={rental.cover} id={rental.id} key={rental.id} />
+                    <Thumb title={rental.title} cover={rental.cover}
+                     id={rental.id} key={rental.id} formatting="" />
                   </article>
                 ))}
               </main>

@@ -1,5 +1,5 @@
 /* react  */
-import React from "react";
+import React from "react"
 import { useState } from "react"
 /* css - image */
 import './carrousel.css'
@@ -8,22 +8,21 @@ import arrowRight from '../../assets/arrow-right.svg'
 
 
 export default function Carrousel({rentalFilterId,formatting}) {
-  /* exemple formatting = "medium"  */
+  /* exemple formatting = "mediumCarrousel"  */
 
     const [current, setCurrent]= useState(0)
-    const length = rentalFilterId.pictures.length;
+    const length = rentalFilterId.pictures.length
    
-
+    /* détermine le numéro de l'image  */
     const nextPicture= ()=>{
         setCurrent(current=== length-1 ? 0 :current+1)
     }
     const previousPicture= ()=>{
         setCurrent(current===0 ? length-1 : current-1)
     }
-
     
     return length > 1 ? (
-        // flèches suivant et précèdent si plusieurs images
+        // flèches suivant et précèdent et info bulle si plusieurs images
         <div className="container__carrousel">  
                   
             <img className="arrow-left" src={arrowLeft} alt="Précèdent" onClick={previousPicture} />
@@ -31,13 +30,13 @@ export default function Carrousel({rentalFilterId,formatting}) {
             {rentalFilterId.pictures.map((picture, index)=>
             index===current &&
             (<img className={`container_picture ${formatting}`} src={picture} alt="photos de la location" key={index} />)
-            )}
+            )} 
             <span className="container_text" >{current+1}/{length}</span> 
                        
         </div>
         
     ) :(
-        // pas de flèche de une seule image
+        // pas de flèche ni info bulle quand une seule image
         <div className="container__carrousel">  
             <img className="container_picture" src={rentalFilterId.pictures} alt="photos de la location" />
         </div>

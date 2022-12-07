@@ -1,19 +1,36 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .tag__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .tag__tags{
-min-width: 115px;
+min-width: 84px;
 min-height: 18px;
 list-style-type: none;
 font-size:0.63rem;
-margin: 5px 10px 10px 0;
-padding: 5px;
+font-weight: 500;
+margin: 7px 10px 10px 0;
+padding: 5px 10px 5px 10px;
 text-align: center;
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-align-items: center;
-justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
 background-color: var(--primary-color);
 border-radius: 5px;
 color:var(--tertiary-color);
@@ -26,10 +43,9 @@ color:var(--tertiary-color);
 
 @media screen and (min-width : 800px) {
     .tag__tags{
+        min-width: 115px;
+        line-height: 25px;
         font-size: 0.88rem;
-        line-height: 19.96px;
-        border-radius: 10px;
-        min-width: 84px;
-        min-height: 18px;
+        border-radius: 10px;       
     }
 }
