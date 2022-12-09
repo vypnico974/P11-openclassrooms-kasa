@@ -48,9 +48,10 @@
   }
   .banner__text {
     font-size: 1.5rem;
-    left: 20px;
-    top: 30px;
+    left: 16px;
+    top: 31px;
     width: 217px;
+    line-height: 24px;
     position: absolute;
   }
 }
@@ -59,7 +60,7 @@
   .banner,
   .banner__cover,
   .banner__background {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     height: 223px;
     margin-bottom: 60px;
@@ -84,8 +85,9 @@
 @media screen and (width > 1300px) {
   .banner__text {
     font-size: 3rem;
-    left: 230px;
-    top: 100px;
+    left: 260px;
+    top: 80px;
     width: 705px;
+    line-height: 68.45px;
   }
 }

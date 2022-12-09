@@ -1,10 +1,10 @@
 /* react  */
 import React, {useState} from "react"
 /* css  */
-import './collapse.css'
+import styles from './collapse.module.css'
 
 export default function Collapse({ title, children,formatting }) {
-  /* exemple formatting="square"  */
+  /* exemple formatting="collapseSquare"  */
 
     const [isOpen, setOpen] = useState(false)
     let widthSvg = 25
@@ -13,10 +13,10 @@ export default function Collapse({ title, children,formatting }) {
         widthSvg = 15
         heightSvg = 5  } 
   return (
-    <div className="container__collapse">
+    <div className={styles.container__collapse}>
       
-    <button
-      className={`button ${formatting} ${isOpen ? "open" : ""}  `}
+    <button 
+      className={`${styles.button} ${styles[formatting]} ${styles[!isOpen ? "open" : ""]} `}
       onClick={() => setOpen(!isOpen)}
       >
       {title}
@@ -30,9 +30,9 @@ export default function Collapse({ title, children,formatting }) {
           </svg>
         )
       }
-    </button>
-    <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
-      <div className={`accordion-content ${formatting}`}>{children}</div>
+    </button> 
+    <div className={`${styles["accordion-item"]} ${styles[formatting]} ${styles[!isOpen ? "collapsed" : ""]} `}>
+      <div className={`${styles["accordion-content"]} ${styles[formatting]}`}>{children}</div>
     </div>
   </div>
   )

@@ -1,7 +1,7 @@
 /* react  */
 import React from "react"
 /* css - images  */
-import './rate.css'
+import styles from './rate.module.css'
 import starOn from '../../assets/StarOn.svg'
 import starOff from '../../assets/StarOff.svg'
 
@@ -22,11 +22,11 @@ export default function Rate({id,rating, formatting}) {
       }
   }
   return (
-    <div className="container__rate">
-        <span className="rate__stars">
+    <div className={styles.container__rate}>
+        <span className={styles.rate__stars}>
             {starArray.map((star,index) => 
                 <img src={star} alt="note" key={`${id}-${index}`} 
-                className={`rate__star ${formatting}`} />        
+                className={`${styles.rate__star} ${styles[formatting]}`} />        
             
             )} 
        </span>     

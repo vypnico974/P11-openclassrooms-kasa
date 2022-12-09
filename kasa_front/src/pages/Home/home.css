@@ -33,6 +33,7 @@
 }
 .article__card{
     margin-bottom: 20px;
+    width : 335px;
 }
 
 @media screen and (min-width: 668px) {
@@ -42,6 +43,7 @@
     }
     .article__card{
         margin-left: 5px;
+        width:340px;
     }
 }
 
@@ -69,10 +71,8 @@
             -ms-flex-pack: space-evenly;
                 justify-content: space-evenly;
     }
-}
-
-@media screen and (min-width: 1440px) {
     .article__card{
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 }
+

@@ -13,7 +13,10 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	width: 100%;
-	padding: 40px 100px 16px 100px;
+	padding: 40px 100px 13px 100px;
+}
+.header{
+	color: var(--primary-color);
 }
 .container__header.smallHeader {
 	width: 55%;
@@ -80,6 +83,7 @@ a.link {
 	.header__nav__ul--li{
 		font-size: 0.75rem;
 		padding-left: 10px;
+		line-height: 17.11px;
 	}
 	.link {
 		text-transform: uppercase;

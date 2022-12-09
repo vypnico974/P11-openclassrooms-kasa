@@ -39,17 +39,17 @@
             align-items: center;
     border-radius: 10px;
 }
-.button.small.oval{
+.button.collapseSmall.collapseOval{
     height: 100px;
     width : 150px;    
     border-radius: 50%;
 }
-.button.big.oval{
+.button.collapseBig.collapseOval{
     width : 100%; 
     height: 50px;   
     border-radius: 50%;
 }
-.button.square{
+.button.collapseSquare{
     width: 160px;
     height: 160px;
     font-size: 1rem;
@@ -59,36 +59,44 @@
     background-color: #F6F6F6;
     color : var(--primary-color);
     margin-top: -10px;
+    border-radius: 5px;
 }
 .accordion-content.rentalBig {
     min-height: 239px;
-}
-.big {
-    width: 98%;
-    font-size: 1.13rem;
-    font-weight: 400;
-    border-radius: 10px;
-}
-.rentalBig {
-    width: 98%;
     font-size: 1.13rem;
     line-height: 25.67px;
     font-weight: 400;
     border-radius: 10px;
+    width:98%
 }
-.Aboutbig {
+.collapseBig {
     width: 98%;
+    font-size: 1.13rem;
+    font-weight: 400;
+    border-radius: 10px;
+}
+button.rentalBig {
+    width: 98%;
+    font-size: 1.13rem;
+    line-height: 25.67px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 3.25rem;
+}
+button.aboutBig {
+    width: 100%;
     font-size: 1.5rem;
+    height : 2.93rem;
     font-weight: 400;
     line-height: 34.22px;
     border-radius: 5px;
 }
-.medium {
+.collapseMedium {
     width: 50%;
     font-size: 1.13rem;
     font-weight: 400;
 }
-.small {
+.collapseSmall {
     width: 25%;
     font-size: 1.13rem;
     font-weight: 400;
@@ -97,6 +105,11 @@
 @media screen and (min-width : 800px) {
     .container__collapse{
         margin-bottom : 30px;
+    }
+    .accordion-content.aboutBig {
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 34.22px;
     }
 }
 
@@ -117,14 +130,27 @@
         width : 9px;
         height : 15px;
     }
-    .rentalBig {
-        width: 98%;
+    button.rentalBig {
+        width: 100%;
+        font-size: 0.82rem;
+        line-height: 18.54px;
+        font-weight: 500;
+        border-radius: 5px;
+        height: 1.88rem;
+    }
+    button.aboutBig {
+        border-radius: 5px;
+        font-size: 0.63rem;
+        font-weight: 500;
+        line-height: 14.26px;
+        height:1.88rem;
+    }
+    .accordion-content.rentalBig {
+        min-height: 0;
         font-size: 0.75rem;
         line-height: 17.11px;
         font-weight: 400;
         border-radius: 5px;
-    }
-    .accordion-content.rentalBig {
-        min-height: 0;
+        width:100%
     }
 }

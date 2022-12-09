@@ -11,6 +11,7 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 5px;
 }
 
 .tag__tags{
@@ -19,8 +20,9 @@ min-height: 18px;
 list-style-type: none;
 font-size:0.63rem;
 font-weight: 500;
+line-height: 14.26px;
 margin: 7px 10px 10px 0;
-padding: 5px 10px 5px 10px;
+padding: 3px 15px 1px 15px;
 text-align: center;
 display: -webkit-box;
 display: -ms-flexbox;
@@ -44,8 +46,12 @@ color:var(--tertiary-color);
 @media screen and (min-width : 800px) {
     .tag__tags{
         min-width: 115px;
-        line-height: 25px;
+        height: 1.57rem;
         font-size: 0.88rem;
-        border-radius: 10px;       
+        border-radius: 10px; 
+        padding: 1px 15px 0 15px;   
+    }
+    .tag__list{
+        margin-top: 15px;
     }
 }

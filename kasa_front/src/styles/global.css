@@ -50,6 +50,7 @@ ul {
 }
 .link {
   text-decoration: none;
+  color: var(--primary-color);
 }
 
 .link:hover {

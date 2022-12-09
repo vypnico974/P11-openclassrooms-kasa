@@ -21,13 +21,13 @@ export default function App() {
     <Fragment>  
       {/* en-tête identique pour chaque page */}   
       <Header picture={logoHeader} linkPicture="/" arrayNav={arrayNav}
-       formatting="" /> 
+       formatting="header" /> 
 
       <Router />  
 
        {/* pied de page identique pour chaque page */}   
       <Footer picture={logoWhite} text="© 2020 Kasa. All rights reserved"
-        formatting="" /> 
+        formatting="footerBig" /> 
     </Fragment>
   )
 }

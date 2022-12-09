@@ -1,6 +1,6 @@
 /* react */
 import * as React from "react"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 /* pages  */
 import Error from '../pages/Error/error'
 import Home from '../pages/Home/home'

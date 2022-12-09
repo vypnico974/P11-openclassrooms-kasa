@@ -27,10 +27,12 @@
     border-radius: 32px;
     background-color:#C4C4C4;
 }
-.host__photo.square{   
+.host__photo.hostSquare{   
     border-radius: 0;
 }
-
+.host{
+    width:100%;
+}
 @media screen and (max-width : 800px) {
     .container__host{
         margin:0;

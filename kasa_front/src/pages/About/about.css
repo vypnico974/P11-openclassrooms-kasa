@@ -5,9 +5,9 @@
 * Browsers: last 4 version
 */
 
-.article__card{
+/* .article__card{
     margin-bottom: 20px;
-}
+} */
 
 @media screen and (width < 668px) {
 	.container_about{

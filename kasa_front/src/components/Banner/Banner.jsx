@@ -1,19 +1,22 @@
 /* react  */
 import React from "react"
 /* css  */
-import './banner.css'
+// import './banner.css'
+import styles from './banner.module.css' // test syntaxe module css
 
 export default function Banner({source, source_mobile, textContent,formatting}) {
     /* exemple formatting = "bannerAbout", formatting = "bannerHome"  */
-    return (
-        <div className="banner">
-            <div className={`banner__cover ${formatting}`}></div>
+    return ( 
+        <div className={styles.banner}> 
+            <div className={`${styles.banner__cover} ${styles[formatting]}`}></div>
                 <picture>
                     <source media="(max-width: 644px)" srcSet={source_mobile} />
                     <source media="(min-width: 645px)" srcSet={source} />
-                    <img className={`banner__background ${formatting}`} src={source} alt="Images décoratives" />
+                    <img className={`${styles.banner__background} ${styles[formatting]}`} src={source} alt="Images décoratives" />
                 </picture>
-                 {textContent && <h2 className="banner__text">{textContent}</h2> }
+                 {textContent && <h2 className={styles.banner__text}>{textContent}</h2> }
         </div>
     )
-}
+}  
+// test syntaxe module css
+// {styles.banner} {`${styles.banner__cover} ${styles.formatting}`}
