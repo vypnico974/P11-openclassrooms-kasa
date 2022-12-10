@@ -29,9 +29,13 @@
 	width: 105px;
 	height: 34px;
 }
-a.link {
+.link {
 	text-decoration:none;
 	outline: none;
+	color: var(--primary-color);
+}
+.navLink_active{
+	text-decoration:underline;
 	color: var(--primary-color);
 }
 .header__nav__ul{
@@ -85,7 +89,7 @@ a.link {
 		padding-left: 10px;
 		line-height: 17.11px;
 	}
-	.link {
+	.link, .navLink_active{
 		text-transform: uppercase;
 	}
 }

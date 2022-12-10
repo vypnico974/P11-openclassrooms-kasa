@@ -4,7 +4,7 @@ import React from "react"
 import styles from './host.module.css'
 
 export default function Host({host, formatting}) {
-    /*  exemple formatting formatting ="hostSquare" */
+    /*  exemple formatting ="hostSquare" */
     const fullName = host.name.indexOf(" ")
     const name = host.name.slice(0,fullName)
     const lastName = host.name.slice(fullName)

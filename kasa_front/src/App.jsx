@@ -18,7 +18,8 @@ const arrayNav = [{ linkNav: "/", titleNav: "Accueil" },
 
 export default function App() {
   return (
-    <Fragment>  
+    /* <></> évite de rajouter un noeud suppémentaire au DOM */
+    <>  
       {/* en-tête identique pour chaque page */}   
       <Header picture={logoHeader} linkPicture="/" arrayNav={arrayNav}
        formatting="header" /> 
@@ -28,7 +29,7 @@ export default function App() {
        {/* pied de page identique pour chaque page */}   
       <Footer picture={logoWhite} text="© 2020 Kasa. All rights reserved"
         formatting="footerBig" /> 
-    </Fragment>
+    </>
   )
 }
 
