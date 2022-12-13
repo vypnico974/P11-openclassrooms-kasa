@@ -10,7 +10,8 @@ import About from '../pages/About/about'
 /* Les différents routes du site  */
 export default function Router() {
     return (
-      <div>          
+       /* <></> évite de rajouter un noeud suppémentaire au DOM */
+      <>          
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -18,7 +19,7 @@ export default function Router() {
           {/* path="*" lorsque l'URL ne correspond à aucune route déclaré */}
           <Route path="*" element={<Error />} />
         </Routes>
-      </div>
+      </>
     )
   }
   

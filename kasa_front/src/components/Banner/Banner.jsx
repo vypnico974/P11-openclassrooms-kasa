@@ -1,8 +1,7 @@
 /* react  */
 import React from "react"
 /* css  */
-// import './banner.css'
-import styles from './banner.module.css' // test syntaxe module css
+import styles from './banner.module.css' 
 
 export default function Banner({source, source_mobile, textContent,formatting}) {
     /* exemple formatting = "bannerAbout", formatting = "bannerHome"  */
@@ -18,5 +17,3 @@ export default function Banner({source, source_mobile, textContent,formatting}) 
         </div>
     )
 }  
-// test syntaxe module css
-// {styles.banner} {`${styles.banner__cover} ${styles.formatting}`}

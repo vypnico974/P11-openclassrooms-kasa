@@ -49,15 +49,20 @@ export default function Rental() {
         /* données de la location non vide    */
         filterIdData && (
         <div>
-           <Carrousel rentalFilterId={filterIdData} formatting="" />   
+           <Carrousel rentalFilterId={filterIdData} formatting="" />
+             {/* exemple formatting = "mediumCarrousel"    */}
         <div className="container__rental__info">
           <section>
              <Info title={filterIdData.title} location={filterIdData.location} formatting="" />
+             {/* exemple formatting = "mediumInfo" */}
             <Tag id={filterIdData.id} tags={filterIdData.tags} formatting=""/>
+                {/* exemple formattiong = "tagCircle" */}
           </section>
           <aside className="container_rental_aside">
             <Rate id={filterIdData.id} rating={filterIdData.rating} formatting="" />
+               {/* exemple formatting = "starBig" */}
             <Host host={filterIdData.host} formatting="" />
+                   {/* exemple formatting ="hostSquare" */}
           </aside>  
         </div> 
         <div className="container__rental__collapse">

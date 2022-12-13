@@ -8,10 +8,6 @@
 .thumb {
   position: relative;
 }
-
-.img:hover {
-  transform: translate(1.2);
-}
 .thumb,
 .thumb__img {
   height: 255px;

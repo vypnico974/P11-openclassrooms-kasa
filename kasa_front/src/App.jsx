@@ -15,6 +15,10 @@ import logoWhite from "./assets/kasa_logo_white.svg"
 const arrayNav = [{ linkNav: "/", titleNav: "Accueil" },
                   { linkNav: "/about", titleNav: "A Propos" }]
 
+//  const arrayNav = [{ linkNav: "/", titleNav: "Accueil" },
+//  { linkNav: "/about", titleNav: "A Propos"},
+// { linkNav: "/about", titleNav: "Test" }]
+
 
 export default function App() {
   return (
@@ -23,7 +27,7 @@ export default function App() {
       {/* en-tête identique pour chaque page */}   
       <Header picture={logoHeader} linkPicture="/" arrayNav={arrayNav}
        formatting="header" /> 
-
+        {/* exemple formatting = "smallHeader" */}
       <Router />  
 
        {/* pied de page identique pour chaque page */}   

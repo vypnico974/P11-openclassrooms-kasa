@@ -19,11 +19,10 @@ export default function Home() {
   /* connexion json */
   const { data, hasError, errorType, isLoading } = useFetch('http://localhost:3000/rentals.json')
   // console.log(data)
-  
  
-  if (isLoading){ /* si chargement en cours, affichage spinner chargement */
+   if (isLoading){ /* si chargement en cours, affichage spinner chargement */
     return <Spinner title="" typeLoader="loader-1" formatting=""/>
-  }
+  }           /* exemple typeLoader="loader-2" formatting = "spinnerBig"  */
   if (hasError){ /* si erreur de connexion  */
   console.log(errorType)
     return <div className="error">Oups! Une erreur est survenue</div>
@@ -35,13 +34,16 @@ export default function Home() {
     return (
     <div>
        <div className="container__home">
-            <Banner source={bannerHome} source_mobile={bannerHomeMobile}
-             textContent="Chez vous, partout et ailleurs"  formatting="bannerHome" />
+            <Banner source={bannerHome}
+             source_mobile={bannerHomeMobile}
+             textContent="Chez vous, partout et ailleurs"
+             formatting="bannerHome" />
               <main className="container__cards">
                 {data.map((rental) => (
                   <article key={rental.id} className="article__card">
                     <Thumb title={rental.title} cover={rental.cover}
                      id={rental.id} key={rental.id} formatting="" />
+                     {/* exemple formatting = "thumOval" */}
                   </article>
                 ))}
               </main>

@@ -29,6 +29,9 @@
 	width: 105px;
 	height: 34px;
 }
+.header__nav__ul--li.smallHeader{
+	font-size: 0.7rem;
+}
 .link {
 	text-decoration:none;
 	outline: none;

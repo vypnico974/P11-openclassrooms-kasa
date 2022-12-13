@@ -13,7 +13,8 @@ export default function about() {
 
   return (
     <div className="container_about">
-      <Banner source={bannerAbout} source_mobile={bannerAboutMobile} 
+      <Banner source={bannerAbout}
+       source_mobile={bannerAboutMobile} 
        textContent="" formatting="bannerAbout" />
       <main className="container_main">
         { /* exemples d'autres formes pour le Collapse : formatting="small oval" ,
